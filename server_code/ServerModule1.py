@@ -9,4 +9,4 @@ def add_to_do_item_to_data_table(task):
 
 @anvil.server.callable
 def get_tasks():
-  return app_tables.tasks.search()
+  return app_tables.tasks.client_writable().search()
