@@ -1,5 +1,17 @@
 allow_embedding: false
 package_name: To_Do_List_Tutorial
+db_schema:
+  tasks:
+    client: none
+    server: full
+    columns:
+    - name: title
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: done
+      admin_ui: {order: 1, width: 200}
+      type: bool
+    title: tasks
 name: To Do List Tutorial
 startup_form: Form1
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
