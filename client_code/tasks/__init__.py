@@ -1,5 +1,7 @@
 from ._anvil_designer import tasksTemplate
 from anvil import *
+import anvil.google.auth, anvil.google.drive
+from anvil.google.drive import app_files
 import anvil.users
 import anvil.server
 import anvil.tables as tables
@@ -11,6 +13,7 @@ class tasks(tasksTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.refresh()
+    anvil.users.login_with_form()
   def refresh(self):
     self.repeating_panel_tasks.items = anvil.server.call('get_tasks')
     
@@ -21,7 +24,7 @@ class tasks(tasksTemplate):
   def button_add_click(self, **event_args):
     """This method is called when the button is clicked"""
     task = self.text_box_new_task.text
-    anvil.server.call('add_to_do_item_to_data_table',task)
+    anvil.server.call('add_task',task)
     self.text_box_new_task.text = ""
     self.refresh()
     
