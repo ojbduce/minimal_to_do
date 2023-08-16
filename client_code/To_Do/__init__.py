@@ -37,6 +37,19 @@ class To_Do(To_DoTemplate):
   def button_done_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Done')
+
+  def button_login_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.users.login_with_form()
+    self.label_login_status.text= f"You are logged in as {user['email']}"
+
+  def button_log_out_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.label_login_status.text = "You are logged out"
+    anvil.users.logout()
+    open_form('To_Do')
+
+
     
 
     

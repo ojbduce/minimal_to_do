@@ -34,3 +34,25 @@ components:
       Background', bold: true, underline: false, icon: ''}
   name: button_done
   layout_properties: {slot: sidebar}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: true, underline: false, icon: ''}
+  name: label_login_status
+  layout_properties: {slot: nav-right, grid_position: 'JWLCFL,CHDPJA'}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: Login, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: button_login
+  layout_properties: {slot: nav-right}
+  event_bindings: {click: button_login_click}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: Log Out, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: button_log_out
+  layout_properties: {slot: nav-right}
+  event_bindings: {click: button_log_out_click}
