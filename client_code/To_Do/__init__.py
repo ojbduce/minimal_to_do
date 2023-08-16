@@ -15,12 +15,17 @@ class To_Do(To_DoTemplate):
     #anvil.users.logout()
     anvil.users.login_with_form()
     self.refresh()
+    self.update_login_status()
+    
   def refresh(self):
     self.repeating_panel_tasks.items = anvil.server.call('get_tasks')
-    
-    
 
-    # Any code you write here will run before the form opens.
+  def update_login_status(self):
+    user = anvil.users.get_user()
+    if user is None:
+      self.label_login_status.text = "You are not logged in"
+    else:
+      self.label_login_status.text= f"You are logged in as {user['email']}"
 
   def button_add_click(self, **event_args):
     """This method is called when the button is clicked"""

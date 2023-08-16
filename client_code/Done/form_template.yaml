@@ -22,15 +22,15 @@ components:
 - type: Button
   properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
     foreground: white, visible: true, text: To Do, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
-      2', bold: true, underline: false, icon: ''}
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Sidebar
+      Background', bold: true, underline: false, icon: ''}
   name: button_to_do
   layout_properties: {slot: sidebar}
   event_bindings: {click: button_to_do_click}
 - type: Button
   properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
     foreground: '#fcfcfc', visible: true, text: Done, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
-      1', bold: true, underline: false, icon: ''}
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Sidebar
+      Background', bold: true, underline: false, icon: ''}
   name: button_done
   layout_properties: {slot: sidebar}
