@@ -13,9 +13,9 @@ services:
   client_config: {}
   server_config: {}
 startup: {type: form, module: To_Do}
-package_name: To_Do_List_Tutorial
+package_name: To_Do_List_
 allow_embedding: false
-name: To Do List Tutorial
+name: 'To Do List '
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
 metadata: {title: To Do List Mark 1, description: 'To Do List '}
 startup_form: null
