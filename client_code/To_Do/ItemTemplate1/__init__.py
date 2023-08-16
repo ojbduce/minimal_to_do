@@ -18,6 +18,8 @@ class ItemTemplate1(ItemTemplate1Template):
   def check_box_1_change(self, **event_args):
     """This method is called when this checkbox is checked or unchecked"""
     if self.check_box_1.checked == True:
+      task = self.item['task']
+      anvil.server.call('tasks_done', task)
       self.item.delete()
       self.remove_from_parent()
 

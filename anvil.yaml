@@ -9,7 +9,10 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: tasks}
+- source: /runtime/services/anvil/email.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: To_Do}
 package_name: To_Do_List_Tutorial
 allow_embedding: false
 name: To Do List Tutorial
@@ -58,3 +61,18 @@ db_schema:
       type: datetime
       admin_ui: {order: 6, width: 200}
     title: Users
+  done:
+    client: full
+    server: full
+    columns:
+    - name: task
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: owner
+      admin_ui: {order: 1, width: 200}
+      type: link_single
+      target: users
+    - name: date
+      admin_ui: {order: 1.5, width: 200}
+      type: datetime
+    title: done

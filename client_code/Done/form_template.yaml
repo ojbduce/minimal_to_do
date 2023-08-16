@@ -1,0 +1,36 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:dashboard.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: form:Completed_Tasks
+    properties: {}
+    name: custom_1
+    layout_properties: {grid_position: 'FREWUP,FJTNKY'}
+- type: Label
+  properties: {role: title, align: left, tooltip: '', border: '', foreground: 'theme:Sidebar
+      Background', visible: true, text: Todo.io, font_size: 18, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_title
+  layout_properties: {slot: title}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: white, visible: true, text: To Do, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
+      2', bold: true, underline: false, icon: ''}
+  name: button_to_do
+  layout_properties: {slot: sidebar}
+  event_bindings: {click: button_to_do_click}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '#fcfcfc', visible: true, text: Done, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
+      1', bold: true, underline: false, icon: ''}
+  name: button_done
+  layout_properties: {slot: sidebar}

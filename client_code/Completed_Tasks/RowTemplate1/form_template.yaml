@@ -1,0 +1,7 @@
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {}
+  name: label_date
+  layout_properties: {column: UJTTTD}
+is_package: true
